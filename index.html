@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>THREADSENSE</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-container": "#066f79",
+                        "secondary-fixed-dim": "#82d3de",
+                        "surface-bright": "#f9f9f9",
+                        "surface-container-low": "#f3f3f3",
+                        "on-background": "#1b1b1b",
+                        "tertiary-fixed-dim": "#c6c6c6",
+                        "primary-fixed-dim": "#c6c6c6",
+                        "outline-variant": "#cfc4c5",
+                        "secondary": "#006972",
+                        "primary-container": "#1b1b1b",
+                        "background": "#f9f9f9",
+                        "secondary-container": "#9ff0fb",
+                        "tertiary-fixed": "#e2e2e2",
+                        "error-container": "#ffdad6",
+                        "primary-fixed": "#e2e2e2",
+                        "tertiary-container": "#1b1b1b",
+                        "outline": "#7e7576",
+                        "error": "#ba1a1a",
+                        "inverse-surface": "#303030",
+                        "on-primary-fixed-variant": "#474747",
+                        "tertiary": "#000000",
+                        "surface": "#f9f9f9",
+                        "on-error": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed-variant": "#004f56",
+                        "on-primary-container": "#848484",
+                        "on-tertiary-container": "#848484",
+                        "secondary-fixed": "#9ff0fb",
+                        "primary": "#000000",
+                        "on-surface": "#1b1b1b",
+                        "surface-variant": "#e2e2e2",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed": "#1b1b1b",
+                        "inverse-primary": "#c6c6c6",
+                        "on-error-container": "#93000a",
+                        "surface-container": "#eeeeee",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-fixed": "#1b1b1b",
+                        "on-tertiary-fixed-variant": "#474747",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-high": "#e8e8e8",
+                        "surface-container-highest": "#e2e2e2",
+                        "surface-dim": "#dadada",
+                        "on-surface-variant": "#4c4546",
+                        "inverse-on-surface": "#f1f1f1",
+                        "on-secondary-fixed": "#001f23",
+                        "surface-tint": "#5e5e5e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "stack-xl": "48px",
+                        "unit": "8px",
+                        "gutter-md": "16px",
+                        "gutter-xs": "4px",
+                        "gutter-sm": "8px",
+                        "stack-lg": "32px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-sm": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "label-sm": ["11px", { "lineHeight": "14px", "fontWeight": "500" }],
+                        "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "500" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #FFFFFF; /* Enforcing pure white */
+        }
+    </style>
+</head>
+<body class="min-h-screen w-full flex flex-col justify-center items-center text-primary px-4 sm:px-6 lg:px-8">
+    <div class="fixed top-4 right-4 md:top-8 md:right-8 z-[50] flex bg-white/90 dark:bg-black/90 backdrop-blur-md p-1 rounded-full shadow-md border border-gray-200 dark:border-gray-800">
+        <a href="2onboarding_meet_threadsense.html" class="px-4 py-2 rounded-full font-sans text-[10px] leading-none uppercase tracking-widest font-semibold bg-black text-white dark:bg-white dark:text-black hover:opacity-80 transition-all flex items-center gap-1 shadow-sm">
+            Next 
+            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+        </a>
+    </div>
+    <div class="flex flex-col items-center justify-center space-y-6 sm:space-y-8 md:space-y-10 max-w-7xl mx-auto w-full">
+        
+        <!-- Logo Text -->
+        <h1 class="font-display-lg text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-center tracking-tighter uppercase text-primary transition-all duration-300">
+            ThreadSense
+        </h1>
+        
+        <!-- Haptic Icon Image -->
+        <img alt="ThreadSense Logo Icon" 
+             class="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 object-contain transition-transform duration-300 hover:scale-105" 
+             src="thread.png.png"/>
+             
+    </div>
+</body>
+</html>

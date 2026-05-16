@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>THREADSENSE - Product Detail</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "secondary": "#006972",
+                        "on-tertiary-fixed": "#1b1b1b",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed-dim": "#c6c6c6",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed-variant": "#474747",
+                        "on-secondary-fixed": "#001f23",
+                        "on-primary-container": "#848484",
+                        "outline": "#7e7576",
+                        "surface": "#f9f9f9",
+                        "outline-variant": "#cfc4c5",
+                        "secondary-fixed-dim": "#82d3de",
+                        "on-surface": "#1b1b1b",
+                        "surface-bright": "#f9f9f9",
+                        "on-secondary-container": "#066f79",
+                        "primary": "#000000",
+                        "secondary-fixed": "#9ff0fb",
+                        "on-primary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-container": "#848484",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed-dim": "#c6c6c6",
+                        "inverse-on-surface": "#f1f1f1",
+                        "on-tertiary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed": "#e2e2e2",
+                        "surface-tint": "#5e5e5e",
+                        "on-surface-variant": "#4c4546",
+                        "surface-container-low": "#f3f3f3",
+                        "surface-container": "#eeeeee",
+                        "on-secondary": "#ffffff",
+                        "tertiary-container": "#1b1b1b",
+                        "on-secondary-fixed-variant": "#004f56",
+                        "surface-container-high": "#e8e8e8",
+                        "primary-fixed": "#e2e2e2",
+                        "primary-container": "#1b1b1b",
+                        "on-primary-fixed": "#1b1b1b",
+                        "tertiary": "#000000",
+                        "on-tertiary-fixed-variant": "#474747",
+                        "on-background": "#1b1b1b",
+                        "surface-container-highest": "#e2e2e2",
+                        "secondary-container": "#9ff0fb",
+                        "inverse-surface": "#303030",
+                        "surface-variant": "#e2e2e2",
+                        "inverse-primary": "#c6c6c6",
+                        "background": "#f9f9f9",
+                        "surface-dim": "#dadada"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "gutter-md": "16px",
+                        "margin-mobile": "20px",
+                        "unit": "8px",
+                        "stack-xl": "48px",
+                        "stack-lg": "32px",
+                        "gutter-sm": "8px",
+                        "gutter-xs": "4px"
+                    },
+                    fontFamily: {
+                        "label-sm": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-sm": ["Inter"]
+                    },
+                    fontSize: {
+                        "label-sm": ["11px", { "lineHeight": "14px", "fontWeight": "500" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined[data-weight="fill"] {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-surface lg:bg-surface-container-lowest text-on-surface antialiased min-h-screen flex flex-col relative pb-32 lg:pb-0">
+    <div class="fixed bottom-24 right-4 md:bottom-8 md:right-8 z-[9999] flex gap-1 bg-white/90 dark:bg-black/90 backdrop-blur-md p-1 rounded-full shadow-md border border-gray-200 dark:border-gray-800">
+        <a href="7product_listing.html" class="px-3 py-2 rounded-full font-sans text-[10px] leading-none uppercase tracking-widest font-semibold text-black dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-all flex items-center gap-1">
+            <span class="material-symbols-outlined text-[14px]">arrow_back</span>
+            Back
+        </a>
+        <a href="9product_detail_haptic_acc.html" class="px-3 py-2 rounded-full font-sans text-[10px] leading-none uppercase tracking-widest font-semibold bg-black text-white dark:bg-white dark:text-black hover:opacity-80 transition-all flex items-center gap-1 shadow-sm">
+            Next 
+            <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+        </a>
+    </div>
+
+    <!-- Top Navigation -->
+    <header class="absolute top-0 left-0 w-full z-50 bg-transparent px-margin-mobile lg:px-12 h-20 flex justify-between items-center pointer-events-none max-w-[1440px] mx-auto right-0">
+        <button class="w-10 h-10 lg:w-12 lg:h-12 bg-surface-container-lowest/80 backdrop-blur-md rounded-full flex items-center justify-center pointer-events-auto shadow-sm border border-outline-variant/30 hover:bg-surface transition-colors">
+            <span class="material-symbols-outlined text-primary">arrow_back</span>
+        </button>
+        <div class="flex gap-2 lg:gap-4 pointer-events-auto">
+            <button class="w-10 h-10 lg:w-12 lg:h-12 bg-surface-container-lowest/80 backdrop-blur-md rounded-full flex items-center justify-center shadow-sm border border-outline-variant/30 hover:bg-surface transition-colors">
+                <span class="material-symbols-outlined text-primary">favorite_border</span>
+            </button>
+            <button class="w-10 h-10 lg:w-12 lg:h-12 bg-surface-container-lowest/80 backdrop-blur-md rounded-full flex items-center justify-center shadow-sm border border-outline-variant/30 hover:bg-surface transition-colors">
+                <span class="material-symbols-outlined text-primary">share</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Desktop Wrapper -->
+    <div class="w-full max-w-[1200px] mx-auto lg:grid lg:grid-cols-2 lg:gap-16 lg:px-12 lg:py-16 lg:mt-8">
+        
+        <!-- Hero Image Section -->
+        <section class="relative w-full h-[530px] lg:h-auto lg:aspect-[4/5] bg-surface-container-low lg:rounded-2xl overflow-hidden shadow-sm">
+            <img alt="Premium white silk button-down shirt" class="w-full h-full object-cover object-center" data-alt="A high-fashion editorial photograph of a pristine, white mulberry silk button-down shirt." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoTt4NnNwZ_K75gmKEI-YrG8xc4m9qudPkjfDARyqOUZYKC1115vjRgOl6T25kxGUhrVZ22Bxl04yGxk2aI60snme1waWfK0jj_n9B5oIlN9LeoOg3fwAVt-1lukXi1606DsGJLOaf1Ui6hIQt5K_eCpVAM3SA-Z9Z5F6usMbqKBvfiLK5NoQrrQUeq_EEOSr9v7EJEmQs9HKyLSMzPjI3_kGsvAa4VjL-RVarkKr6kip8mgeNOO4o54HuARcIhbdTeQAriLQJx4w"/>
+            
+            <!-- Touch & Feel Icon -->
+            <div class="absolute bottom-margin-mobile right-margin-mobile lg:bottom-8 lg:right-8">
+                <button class="w-14 h-14 lg:w-16 lg:h-16 bg-surface-container-lowest rounded-full flex items-center justify-center shadow-lg border border-outline-variant/20 relative group hover:scale-105 transition-transform">
+                    <div class="absolute inset-0 rounded-full border-2 border-secondary/30 animate-[ping_2.5s_cubic-bezier(0,0,0.2,1)_infinite]"></div>
+                    <div class="absolute inset-[-4px] rounded-full border border-secondary/10 animate-[ping_3s_cubic-bezier(0,0,0.2,1)_infinite] animation-delay-500"></div>
+                    <span class="material-symbols-outlined text-secondary font-medium" style="font-size: 28px;">fingerprint</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Content Section -->
+        <main class="flex-1 px-margin-mobile pt-stack-lg pb-stack-xl lg:px-0 lg:py-8 lg:pb-0 bg-surface lg:bg-transparent rounded-t-3xl lg:rounded-none -mt-6 lg:mt-0 relative z-10 flex flex-col justify-center">
+            
+            <!-- Title & Price -->
+            <div class="flex justify-between items-start mb-gutter-sm">
+                <h1 class="font-headline-md text-headline-md lg:text-display-lg lg:leading-tight text-primary pr-4">Silk Button-Down Shirt</h1>
+                <span class="font-headline-sm text-headline-sm lg:text-headline-md text-primary whitespace-nowrap mt-1">$120</span>
+            </div>
+            
+            <p class="font-body-md text-body-md lg:text-body-lg text-on-surface-variant mb-stack-lg flex items-center gap-1">
+                <span class="material-symbols-outlined text-[16px] lg:text-[20px] text-outline">verified</span>
+                100% Mulberry Silk
+            </p>
+
+            <!-- Size Selector -->
+            <div class="mb-stack-lg">
+                <div class="flex justify-between items-center mb-gutter-md">
+                    <h3 class="font-label-caps text-label-caps text-primary uppercase tracking-wider">Select Size</h3>
+                    <button class="font-label-sm text-label-sm lg:text-body-md text-on-surface-variant underline underline-offset-4 hover:text-primary transition-colors">Size Guide</button>
+                </div>
+                <div class="flex gap-gutter-md">
+                    <button class="flex-1 py-3 lg:py-4 px-4 rounded-lg border border-outline-variant bg-surface-container-lowest font-body-md text-body-md text-primary text-center hover:border-primary hover:bg-surface-container transition-all">S</button>
+                    <button class="flex-1 py-3 lg:py-4 px-4 rounded-lg border border-primary bg-primary font-body-md text-body-md text-on-primary text-center transition-all shadow-md">M</button>
+                    <button class="flex-1 py-3 lg:py-4 px-4 rounded-lg border border-outline-variant bg-surface-container-lowest font-body-md text-body-md text-primary text-center hover:border-primary hover:bg-surface-container transition-all">L</button>
+                </div>
+            </div>
+
+            <!-- Description -->
+            <div class="mb-stack-lg lg:mb-0">
+                <h3 class="font-label-caps text-label-caps text-primary uppercase tracking-wider mb-gutter-md">Description</h3>
+                <p class="font-body-md text-body-md lg:text-body-lg text-on-surface-variant leading-relaxed">
+                    Elevate your everyday wardrobe with our signature Silk Button-Down. Crafted from pure mulberry silk, it offers an unparalleled drape and a soft, luminous finish. Designed with a relaxed fit for effortless styling.
+                </p>
+            </div>
+
+            <!-- Desktop Add to Bag Button (Hidden on Mobile) -->
+            <div class="hidden lg:block mt-12">
+                <button class="w-full bg-primary text-on-primary rounded-xl py-5 font-label-caps text-label-caps lg:text-body-md lg:font-semibold uppercase tracking-widest flex items-center justify-center gap-3 hover:bg-primary/90 hover:shadow-lg transition-all active:scale-[0.98]">
+                    <span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+                    Add to Bag
+                </button>
+            </div>
+            
+        </main>
+    </div>
+
+    <!-- Mobile Sticky Bottom Action Bar (Hidden on Desktop) -->
+    <div class="fixed bottom-0 left-0 w-full bg-surface-container-lowest border-t border-outline-variant/30 px-margin-mobile py-4 pb-safe z-50 shadow-[0_-4px_24px_rgba(0,0,0,0.03)] lg:hidden">
+        <button class="w-full bg-primary text-on-primary rounded-lg py-4 font-label-caps text-label-caps uppercase tracking-widest flex items-center justify-center gap-2 hover:bg-primary/90 transition-colors active:scale-[0.98]">
+            <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+            Add to Bag
+        </button>
+    </div>
+
+</body>
+</html>

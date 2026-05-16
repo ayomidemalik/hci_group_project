@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>THREADSENSE - Shopping Bag</title>
+    <!-- Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Tailwind Config -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#004f56",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed-variant": "#474747",
+                        "inverse-on-surface": "#f1f1f1",
+                        "surface-dim": "#dadada",
+                        "surface-container-high": "#e8e8e8",
+                        "on-tertiary-fixed": "#1b1b1b",
+                        "secondary-container": "#9ff0fb",
+                        "surface-container": "#eeeeee",
+                        "primary-fixed": "#e2e2e2",
+                        "on-tertiary-fixed-variant": "#474747",
+                        "on-primary-fixed": "#1b1b1b",
+                        "on-primary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed": "#9ff0fb",
+                        "on-primary-container": "#848484",
+                        "surface": "#f9f9f9",
+                        "outline": "#7e7576",
+                        "primary-fixed-dim": "#c6c6c6",
+                        "secondary": "#006972",
+                        "surface-variant": "#e2e2e2",
+                        "surface-tint": "#5e5e5e",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#f9f9f9",
+                        "tertiary": "#000000",
+                        "on-secondary-container": "#066f79",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed-dim": "#82d3de",
+                        "on-error": "#ffffff",
+                        "on-tertiary-container": "#848484",
+                        "primary": "#000000",
+                        "inverse-primary": "#c6c6c6",
+                        "tertiary-fixed-dim": "#c6c6c6",
+                        "tertiary-container": "#1b1b1b",
+                        "tertiary-fixed": "#e2e2e2",
+                        "error": "#ba1a1a",
+                        "on-surface-variant": "#4c4546",
+                        "primary-container": "#1b1b1b",
+                        "on-secondary-fixed": "#001f23",
+                        "background": "#f9f9f9",
+                        "surface-container-highest": "#e2e2e2",
+                        "outline-variant": "#cfc4c5",
+                        "on-background": "#1b1b1b",
+                        "inverse-surface": "#303030",
+                        "surface-container-low": "#f3f3f3",
+                        "on-secondary": "#ffffff",
+                        "on-surface": "#1b1b1b"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "stack-lg": "32px",
+                        "unit": "8px",
+                        "gutter-sm": "8px",
+                        "stack-xl": "48px",
+                        "gutter-md": "16px",
+                        "gutter-xs": "4px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Inter"],
+                        "headline-sm": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["11px", { "lineHeight": "14px", "fontWeight": "500" }],
+                        "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "500" }],
+                        "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased min-h-[100dvh] flex flex-col relative pb-24 md:pb-0">
+    <div class="fixed bottom-24 left-4 md:bottom-8 md:left-8 z-[9999] flex gap-1 bg-white/90 dark:bg-black/90 backdrop-blur-md p-1 rounded-full shadow-md border border-gray-200 dark:border-gray-800">
+        <a href="12customer_reviews.html" class="px-3 py-2 rounded-full font-sans text-[10px] leading-none uppercase tracking-widest font-semibold text-black dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-all flex items-center gap-1">
+            <span class="material-symbols-outlined text-[14px]">arrow_back</span>
+            Back
+        </a>
+        <a href="14checkout.html" class="px-3 py-2 rounded-full font-sans text-[10px] leading-none uppercase tracking-widest font-semibold bg-black text-white dark:bg-white dark:text-black hover:opacity-80 transition-all flex items-center gap-1 shadow-sm">
+            Next 
+            <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+        </a>
+    </div>
+    
+    <!-- TopAppBar -->
+    <header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/20 text-primary dark:text-on-surface flex justify-center h-20">
+        <div class="w-full max-w-7xl flex justify-between items-center px-6 lg:px-12">
+            <button aria-label="Menu" class="text-on-surface-variant hover:text-on-surface transition-colors active:scale-95 p-2 -ml-2 lg:hidden">
+                <span class="material-symbols-outlined text-[28px]">menu</span>
+            </button>
+            
+            <!-- Desktop Nav Links (Hidden on mobile) -->
+            <nav class="hidden lg:flex gap-8 items-center text-on-surface-variant font-body-md">
+                <a href="#" class="hover:text-primary transition-colors">Women</a>
+                <a href="#" class="hover:text-primary transition-colors">Men</a>
+                <a href="#" class="hover:text-primary transition-colors">Accessories</a>
+            </nav>
+
+                        <h1 class="font-display-lg text-display-lg tracking-tighter text-primary dark:text-on-surface uppercase text-center md:justify-self-center">THREADSENSE</h1>
+
+            
+            <div class="flex items-center gap-4">
+                <button aria-label="Search" class="hidden lg:block text-on-surface-variant hover:text-on-surface transition-colors p-2">
+                    <span class="material-symbols-outlined text-[24px]">search</span>
+                </button>
+                <button aria-label="Shopping Bag" class="relative text-on-surface hover:opacity-70 transition-opacity active:scale-95 p-2 -mr-2">
+                    <span class="material-symbols-outlined text-[28px]">shopping_bag</span>
+                    <!-- Optional: Badge indicator for items -->
+                    <span class="absolute top-1 right-1 bg-primary text-on-primary text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">2</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow pt-28 pb-12 px-6 lg:px-12 w-full">
+        <!-- Main Layout Container (Row on desktop, Col on mobile) -->
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
+            
+            <!-- Left Column: Product List -->
+            <div class="w-full lg:w-2/3 flex flex-col">
+                <div class="flex justify-between items-baseline border-b border-outline-variant/30 pb-6 mb-8">
+                    <h1 class="font-headline-md text-3xl text-on-surface tracking-tight">Shopping Bag</h1>
+                    <span class="font-body-md text-on-surface-variant">2 Items</span>
+                </div>
+
+                <div class="flex flex-col gap-8">
+                    <!-- Item 1 -->
+                    <div class="flex gap-6 lg:gap-8 pb-8 border-b border-outline-variant/20">
+                        <!-- Thumbnail -->
+                        <div class="relative w-28 h-36 md:w-40 md:h-52 flex-shrink-0 rounded-lg overflow-hidden bg-surface-container-low group">
+                            <img alt="Silk Button-Down Shirt" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyoL0YzaG03S05T-8OW8Hcgy9V16mBWDVNrMKQjGF6cgxjTP9M_Begf10hAI_HpJ6qkZyILP8gxzwU8dYP9OZ5S92FhTjwgSNuUudQVNGoWKjoAbosvzDRoWRPyuQzWpno6tzmYPy0hDBDJJKeRn7MBgxwIq_sM3KAXTkGqNsf789iy74V7DxgTWcc-ksE-_IJ5W9pYnQyeDcg2Pt5yvQjO-xlBQ1bkntuyhpwNR9Bl7-bQhMfl3H5HRoUyKCpnL48fo9Vg3XdtVg"/>
+                            <div class="absolute bottom-2 right-2 text-primary/40 pointer-events-none md:bottom-3 md:right-3">
+                                <span class="material-symbols-outlined text-[20px] md:text-[24px]" style="font-variation-settings: 'FILL' 1;">fingerprint</span>
+                            </div>
+                        </div>
+                        <!-- Details -->
+                        <div class="flex flex-col flex-grow py-1 justify-between">
+                            <div>
+                                <div class="flex justify-between items-start mb-2">
+                                    <h2 class="font-headline-sm text-lg md:text-xl text-on-surface">Silk Button-Down Shirt</h2>
+                                    <button class="text-on-surface-variant hover:text-error transition-colors ml-4" aria-label="Remove item">
+                                        <span class="material-symbols-outlined text-[24px]">close</span>
+                                    </button>
+                                </div>
+                                <p class="font-body-md text-on-surface-variant mb-2">Color: Cream</p>
+                                <p class="font-body-md text-on-surface-variant">Size: M</p>
+                            </div>
+                            
+                            <div class="flex justify-between items-end mt-6">
+                                <div class="flex items-center border border-outline-variant rounded-md overflow-hidden bg-surface-container-lowest">
+                                    <button class="w-10 h-10 flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[18px]">remove</span></button>
+                                    <span class="w-10 text-center font-body-md text-on-surface">1</span>
+                                    <button class="w-10 h-10 flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[18px]">add</span></button>
+                                </div>
+                                <span class="font-headline-sm text-xl md:text-2xl text-on-surface">$120</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="flex gap-6 lg:gap-8 pb-8 border-b border-outline-variant/20">
+                        <!-- Thumbnail -->
+                        <div class="relative w-28 h-36 md:w-40 md:h-52 flex-shrink-0 rounded-lg overflow-hidden bg-surface-container-low group">
+                            <img alt="Corduroy Trousers" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCylxULCasj74PcrznR4yABtihQVc7VeZYtGSEJK3Uinh0nKhL-as25dtX1XSq_v4KNWFoRQlh1uGMq_iaXn5OkcIfTKoqLKgbjlchdV3GSFxBFVjewWcxA979Iqx687MfKRssEHC_8XdLJ3C1vC3LbgKPJ8FWNCRolzhmYen1GEFb1iaZ43b0RxSDfTbXcLgbqVd2Kyq9TfeixbOzRrrzcjzixd8k2mnffjAW3KT2vPGZYDDsil_AlX3SOBIPPY5jO6YncicAXUMU"/>
+                            <div class="absolute bottom-2 right-2 text-primary/40 pointer-events-none md:bottom-3 md:right-3">
+                                <span class="material-symbols-outlined text-[20px] md:text-[24px]" style="font-variation-settings: 'FILL' 1;">fingerprint</span>
+                            </div>
+                        </div>
+                        <!-- Details -->
+                        <div class="flex flex-col flex-grow py-1 justify-between">
+                            <div>
+                                <div class="flex justify-between items-start mb-2">
+                                    <h2 class="font-headline-sm text-lg md:text-xl text-on-surface">Corduroy Trousers</h2>
+                                    <button class="text-on-surface-variant hover:text-error transition-colors ml-4" aria-label="Remove item">
+                                        <span class="material-symbols-outlined text-[24px]">close</span>
+                                    </button>
+                                </div>
+                                <p class="font-body-md text-on-surface-variant mb-2">Color: Olive Green</p>
+                                <p class="font-body-md text-on-surface-variant">Size: L</p>
+                            </div>
+                            
+                            <div class="flex justify-between items-end mt-6">
+                                <div class="flex items-center border border-outline-variant rounded-md overflow-hidden bg-surface-container-lowest">
+                                    <button class="w-10 h-10 flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[18px]">remove</span></button>
+                                    <span class="w-10 text-center font-body-md text-on-surface">1</span>
+                                    <button class="w-10 h-10 flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[18px]">add</span></button>
+                                </div>
+                                <span class="font-headline-sm text-xl md:text-2xl text-on-surface">$180</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Summary Panel -->
+            <div class="w-full lg:w-1/3 bg-surface-container-lowest lg:bg-surface-bright lg:p-8 lg:rounded-2xl lg:shadow-sm lg:border lg:border-outline-variant/30 lg:sticky lg:top-32 flex flex-col gap-6">
+                <h2 class="hidden lg:block font-headline-md text-2xl border-b border-outline-variant/30 pb-4">Order Summary</h2>
+                
+                <div class="flex flex-col gap-4">
+                    <div class="flex justify-between items-center">
+                        <span class="font-body-lg text-on-surface-variant">Subtotal</span>
+                        <span class="font-headline-sm text-xl text-on-surface">$300.00</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="font-body-lg text-on-surface-variant">Estimated Shipping</span>
+                        <span class="font-body-lg text-on-surface">Calculated at checkout</span>
+                    </div>
+                    <div class="flex justify-between items-center border-t border-outline-variant/30 pt-4 mt-2">
+                        <span class="font-headline-sm text-on-surface font-semibold">Total</span>
+                        <span class="font-display-lg text-2xl font-bold text-on-surface">$300.00</span>
+                    </div>
+                </div>
+
+                <button class="w-full bg-primary text-on-primary py-5 rounded-xl font-label-caps tracking-widest text-sm mt-4 hover:bg-surface-tint hover:shadow-lg transition-all duration-200">
+                    PROCEED TO CHECKOUT
+                </button>
+                
+                <div class="flex items-center justify-center gap-2 mt-4 text-on-surface-variant text-sm">
+                    <span class="material-symbols-outlined text-[18px]">lock</span>
+                    <span>Secure Checkout</span>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- BottomNavBar (Mobile only) -->
+    <nav class="fixed bottom-0 w-full z-50 bg-surface/90 backdrop-blur-md border-t border-outline-variant/20 flex justify-around items-center h-20 pb-safe px-6 md:hidden">
+        <button aria-label="home" class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors">
+            <span class="material-symbols-outlined text-[28px]">home</span>
+        </button>
+        <button aria-label="search" class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors">
+            <span class="material-symbols-outlined text-[28px]">search</span>
+        </button>
+        <button aria-label="favorite" class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors">
+            <span class="material-symbols-outlined text-[28px]">favorite</span>
+        </button>
+        <button aria-label="shopping_bag" class="flex flex-col items-center justify-center text-primary haptic-feedback active:scale-90 duration-200">
+            <span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">shopping_bag</span>
+            <div class="w-1.5 h-1.5 rounded-full bg-primary mt-1 absolute bottom-2"></div>
+        </button>
+    </nav>
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>THREADSENSE - TrueFit Analysis Modal</title>
+    <!-- Google Fonts: Inter & Material Symbols Outlined -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    
+    <!-- Tailwind Config -->
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+              "on-secondary-fixed-variant": "#004f56",
+              "background": "#f9f9f9",
+              "surface-dim": "#dadada",
+              "tertiary-container": "#1b1b1b",
+              "on-tertiary-fixed-variant": "#474747",
+              "on-secondary-container": "#066f79",
+              "inverse-primary": "#c6c6c6",
+              "secondary-container": "#9ff0fb",
+              "error": "#ba1a1a",
+              "surface-variant": "#e2e2e2",
+              "inverse-on-surface": "#f1f1f1",
+              "on-background": "#1b1b1b",
+              "surface-container-low": "#f3f3f3",
+              "tertiary": "#000000",
+              "outline-variant": "#cfc4c5",
+              "surface-container": "#eeeeee",
+              "on-error": "#ffffff",
+              "on-surface-variant": "#4c4546",
+              "on-error-container": "#93000a",
+              "surface-container-high": "#e8e8e8",
+              "secondary-fixed": "#9ff0fb",
+              "on-secondary-fixed": "#001f23",
+              "surface-tint": "#5e5e5e",
+              "surface": "#f9f9f9",
+              "on-primary-container": "#848484",
+              "on-surface": "#1b1b1b",
+              "on-tertiary": "#ffffff",
+              "surface-container-lowest": "#ffffff",
+              "error-container": "#ffdad6",
+              "tertiary-fixed-dim": "#c6c6c6",
+              "surface-bright": "#f9f9f9",
+              "secondary": "#006972",
+              "outline": "#7e7576",
+              "inverse-surface": "#303030",
+              "tertiary-fixed": "#e2e2e2",
+              "surface-container-highest": "#e2e2e2",
+              "on-tertiary-container": "#848484",
+              "on-primary-fixed-variant": "#474747",
+              "primary-fixed": "#e2e2e2",
+              "on-primary-fixed": "#1b1b1b",
+              "on-primary": "#ffffff",
+              "primary-fixed-dim": "#c6c6c6",
+              "on-tertiary-fixed": "#1b1b1b",
+              "on-secondary": "#ffffff",
+              "secondary-fixed-dim": "#82d3de",
+              "primary-container": "#1b1b1b",
+              "primary": "#000000"
+            },
+            "borderRadius": {
+              "DEFAULT": "0.25rem",
+              "lg": "0.5rem",
+              "xl": "0.75rem",
+              "full": "9999px"
+            },
+            "spacing": {
+              "gutter-xs": "4px",
+              "gutter-sm": "8px",
+              "gutter-md": "16px",
+              "unit": "8px",
+              "stack-lg": "32px",
+              "stack-xl": "48px",
+              "margin-mobile": "20px"
+            },
+            "fontFamily": {
+              "label-caps": ["Inter"],
+              "display-lg": ["Inter"],
+              "headline-sm": ["Inter"],
+              "headline-md": ["Inter"],
+              "body-lg": ["Inter"],
+              "label-sm": ["Inter"],
+              "body-md": ["Inter"]
+            },
+            "fontSize": {
+              "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+              "display-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+              "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "500"}],
+              "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+              "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+              "label-sm": ["11px", {"lineHeight": "14px", "fontWeight": "500"}],
+              "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            min-height: max(884px, 100dvh);
+        }
+        /* Utility for safe area padding on mobile */
+        .pb-safe { padding-bottom: env(safe-area-inset-bottom, 20px); }
+        
+        /* Reset padding on desktop to avoid uneven spacing when centered */
+        @media (min-width: 768px) {
+            .md\:pb-0 { padding-bottom: 0 !important; }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen relative overflow-hidden font-body-md">
+    <div class="fixed top-4 right-4 z-[9999] flex gap-2">
+    <a href="10AR_Garment_Preview.html" class="bg-surface-container-lowest text-primary border border-outline-variant font-label-caps text-label-caps px-4 py-2 rounded-full shadow-lg hover:bg-surface-container-low hover:shadow-xl transition-all flex items-center gap-1 uppercase tracking-wider backdrop-blur-md bg-opacity-90">
+        <span class="material-symbols-outlined text-[18px]">arrow_back</span>
+        Back
+    </a>
+    
+    <a href="12customer_reviews.html" class="bg-primary text-on-primary font-label-caps text-label-caps px-4 py-2 rounded-full shadow-lg hover:bg-surface-tint hover:shadow-xl transition-all flex items-center gap-1 uppercase tracking-wider backdrop-blur-md bg-opacity-90">
+        Next 
+        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+    </a>
+</div>
+
+    <!-- Background Layer (Blurred Product Page Context) -->
+    <div class="fixed inset-0 z-0 flex flex-col pointer-events-none filter blur-sm scale-[1.02] transition-all duration-300">
+        <!-- Mock TopAppBar -->
+        <header class="flex items-center justify-between px-margin-mobile h-16 w-full max-w-6xl mx-auto bg-surface md:bg-transparent border-b md:border-none border-outline-variant">
+            <span class="material-symbols-outlined text-primary">menu</span>
+            <h1 class="font-display-lg text-display-lg tracking-tighter text-primary">THREADSENSE</h1>
+            <span class="material-symbols-outlined text-primary">shopping_bag</span>
+        </header>
+
+        <!-- Mock Product Content (Responsive Split Layout) -->
+        <main class="flex-1 overflow-hidden w-full max-w-6xl mx-auto md:flex md:gap-12 md:px-margin-mobile md:py-8">
+            <!-- Product Image Div -->
+            <div class="w-full h-[55vh] md:h-[600px] md:w-1/2 md:rounded-2xl bg-surface-container bg-cover bg-center shadow-sm" 
+                 data-alt="A high-fashion editorial photograph of a flowing, pale beige 100% silk dress..." 
+                 style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBwfazdrw4XD_LnfAVVggMIDuu3vg5BPVXzP9fKwNe65hgofWWcv2hFyPA8GtMNW1EIkTTxLlfYUqSdV4xG9C6HkhvI_SyXsDcpwrssNgUY6ws8dgTgCeCO6euzn4g29-0dqE27A-BKie9ReV_KXPj76guDlHtw15-br9X95t1AVowXo5EBvpUvGgummze5CfYv-GAO6Cgn2QNaFAP3sALMw7WzK6zePvJjpdkzqVMXEkTdgGYNWdkyv2M1zEV_5Gkgsw4l9g_PhU4');">
+            </div>
+            
+            <!-- Product Details Skeleton Content -->
+            <div class="px-margin-mobile py-stack-lg md:w-1/2 md:p-0 md:flex md:flex-col md:justify-center">
+                <div class="h-6 w-2/3 bg-surface-variant rounded mb-gutter-xs"></div>
+                <div class="h-4 w-1/3 bg-surface-variant rounded mb-stack-lg"></div>
+                <div class="h-12 w-full bg-surface-variant rounded-lg"></div>
+                <div class="h-12 w-full bg-surface-variant rounded-lg mt-gutter-md hidden md:block"></div>
+                <div class="h-32 w-full bg-surface-variant rounded-lg mt-gutter-md hidden md:block"></div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal Scrim Overlay -->
+    <div class="fixed inset-0 bg-primary/40 backdrop-blur-[3px] z-40 transition-opacity"></div>
+
+    <!-- Responsive Modal (Bottom Sheet on Mobile -> Centered Dialog on Desktop) -->
+    <section class="fixed bottom-0 left-0 right-0 w-full md:w-[480px] md:left-1/2 md:top-1/2 md:bottom-auto bg-surface-container-lowest rounded-t-xl md:rounded-2xl z-50 flex flex-col shadow-[0_-10px_40px_rgba(0,0,0,0.05)] md:shadow-2xl transform transition-transform duration-300 translate-y-0 md:-translate-x-1/2 md:-translate-y-1/2 pb-safe md:pb-0 overflow-hidden">
+        
+        <!-- Drag Handle Indicator (Mobile Only) -->
+        <div class="w-full flex justify-center pt-gutter-sm pb-gutter-md pointer-events-none md:hidden">
+            <div class="w-10 h-1 bg-surface-variant rounded-full"></div>
+        </div>
+
+        <!-- Modal Header -->
+        <header class="flex items-center justify-between px-margin-mobile pb-gutter-md md:pt-stack-lg border-b border-surface-container">
+            <h2 class="font-headline-sm text-headline-sm text-on-surface">TrueFit Analysis</h2>
+            <button aria-label="Close modal" class="p-1 -mr-1 rounded-full text-on-surface-variant hover:bg-surface-container-low transition-colors">
+                <span class="material-symbols-outlined block">close</span>
+            </button>
+        </header>
+
+        <!-- Modal Content -->
+        <div class="px-margin-mobile py-stack-lg flex-1 overflow-y-auto">
+            <!-- Progress Bar Section -->
+            <div class="mb-stack-lg">
+                <div class="flex justify-between items-end mb-gutter-sm">
+                    <span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Match</span>
+                    <span class="font-headline-md text-headline-md text-primary leading-none">94%</span>
+                </div>
+                <!-- Track -->
+                <div class="h-1.5 w-full bg-surface-container rounded-full overflow-hidden">
+                    <!-- Fill -->
+                    <div class="h-full bg-primary w-[94%] rounded-full transition-all duration-1000 ease-out"></div>
+                </div>
+            </div>
+
+            <!-- Recommendation Text -->
+            <p class="font-body-lg text-body-lg text-on-surface leading-relaxed mb-stack-lg">
+                Based on your previous purchases and the 100% silk composition, we recommend size <span class="font-bold text-primary">Medium</span>. This fabric has zero stretch.
+            </p>
+
+            <!-- Supporting Data (Bento-style Minimal Cards) -->
+            <div class="grid grid-cols-2 gap-gutter-md">
+                <div class="border border-surface-variant rounded-lg p-gutter-md flex flex-col items-start bg-surface-bright">
+                    <span class="material-symbols-outlined text-secondary mb-gutter-sm" style="font-variation-settings: 'FILL' 1;">straighten</span>
+                    <span class="font-label-sm text-label-sm text-on-surface-variant mb-1">Fit Profile</span>
+                    <span class="font-body-md text-body-md text-on-surface font-medium">True to Size</span>
+                </div>
+                <div class="border border-surface-variant rounded-lg p-gutter-md flex flex-col items-start bg-surface-bright">
+                    <span class="material-symbols-outlined text-secondary mb-gutter-sm">texture</span>
+                    <span class="font-label-sm text-label-sm text-on-surface-variant mb-1">Fabric Stretch</span>
+                    <span class="font-body-md text-body-md text-on-surface font-medium">Zero Stretch</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Footer (Action) -->
+        <footer class="px-margin-mobile pt-gutter-md pb-gutter-md md:pb-stack-lg mt-auto border-t border-surface-container bg-surface-container-lowest">
+            <button class="w-full h-14 bg-primary text-on-primary rounded-lg font-body-lg text-body-lg font-semibold flex items-center justify-center gap-gutter-sm hover:bg-on-surface transition-colors active:scale-[0.98] shadow-sm">
+                <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">shopping_bag</span>
+                Add Size M to Bag
+            </button>
+        </footer>
+    </section>
+
+</body>
+</html>

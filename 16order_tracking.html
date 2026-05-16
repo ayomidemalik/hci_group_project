@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>THREADSENSE - Order Tracking</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+<!-- Added Inter Font Import Here -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "inverse-on-surface": "#f1f1f1",
+                "on-tertiary": "#ffffff",
+                "secondary-fixed": "#9ff0fb",
+                "on-primary-fixed": "#1b1b1b",
+                "surface-container-lowest": "#ffffff",
+                "on-primary": "#ffffff",
+                "error": "#ba1a1a",
+                "tertiary-fixed": "#e2e2e2",
+                "inverse-primary": "#c6c6c6",
+                "tertiary-container": "#1b1b1b",
+                "background": "#f9f9f9",
+                "error-container": "#ffdad6",
+                "tertiary-fixed-dim": "#c6c6c6",
+                "surface-container-highest": "#e2e2e2",
+                "surface-container": "#eeeeee",
+                "on-background": "#1b1b1b",
+                "surface-bright": "#f9f9f9",
+                "surface": "#f9f9f9",
+                "secondary-fixed-dim": "#82d3de",
+                "primary-container": "#1b1b1b",
+                "surface-dim": "#dadada",
+                "surface-container-low": "#f3f3f3",
+                "secondary-container": "#9ff0fb",
+                "on-surface": "#1b1b1b",
+                "on-primary-container": "#848484",
+                "on-secondary-container": "#066f79",
+                "on-tertiary-fixed": "#1b1b1b",
+                "on-tertiary-container": "#848484",
+                "on-error": "#ffffff",
+                "surface-variant": "#e2e2e2",
+                "outline": "#7e7576",
+                "on-secondary-fixed-variant": "#004f56",
+                "on-primary-fixed-variant": "#474747",
+                "primary": "#000000",
+                "on-secondary-fixed": "#001f23",
+                "inverse-surface": "#303030",
+                "surface-tint": "#5e5e5e",
+                "secondary": "#006972",
+                "primary-fixed-dim": "#c6c6c6",
+                "on-secondary": "#ffffff",
+                "outline-variant": "#cfc4c5",
+                "tertiary": "#000000",
+                "on-surface-variant": "#4c4546",
+                "on-tertiary-fixed-variant": "#474747",
+                "primary-fixed": "#e2e2e2",
+                "surface-container-high": "#e8e8e8",
+                "on-error-container": "#93000a"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "stack-lg": "32px",
+                "stack-xl": "48px",
+                "margin-mobile": "20px",
+                "gutter-xs": "4px",
+                "unit": "8px",
+                "gutter-sm": "8px",
+                "gutter-md": "16px"
+        },
+        "fontFamily": {
+                "label-sm": ["Inter"],
+                "headline-md": ["Inter"],
+                "label-caps": ["Inter"],
+                "body-md": ["Inter"],
+                "headline-sm": ["Inter"],
+                "display-lg": ["Inter"],
+                "body-lg": ["Inter"]
+        },
+        "fontSize": {
+                "label-sm": ["11px", {"lineHeight": "14px", "fontWeight": "500"}],
+                "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "500"}],
+                "display-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+        }
+      }
+    }
+  }
+</script>
+<style>
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: max(884px, 100dvh);
+  }
+</style>
+</head>
+<body class="bg-background min-h-screen text-primary flex justify-center">
+  <div class="fixed bottom-4 right-4 md:bottom-8 md:right-8 z-[9999] flex gap-1 bg-white/90 dark:bg-black/90 backdrop-blur-md p-1 rounded-full shadow-md border border-gray-200 dark:border-gray-800">
+        <a href="15order_confirmed.html" class="px-3 py-2 rounded-full font-sans text-[10px] leading-none uppercase tracking-widest font-semibold text-black dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-all flex items-center gap-1">
+            <span class="material-symbols-outlined text-[14px]">arrow_back</span>
+            Back
+        </a>
+        <a href="17my_swatch_book.html" class="px-3 py-2 rounded-full font-sans text-[10px] leading-none uppercase tracking-widest font-semibold bg-black text-white dark:bg-white dark:text-black hover:opacity-80 transition-all flex items-center gap-1 shadow-sm">
+            Next 
+            <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+        </a>
+    </div>
+<div class="w-full bg-surface relative pb-stack-xl shadow-sm min-h-screen flex flex-col">
+  <header class="bg-surface border-b border-outline-variant docked full-width top-0 z-50">
+    <div class="flex justify-between items-center w-full h-16 px-margin-mobile lg:px-8 max-w-6xl mx-auto">
+      <button class="text-primary hover:opacity-80 transition-opacity flex items-center justify-center w-10 h-10 -ml-2 lg:ml-0">
+        <span class="material-symbols-outlined text-2xl">menu</span>
+      </button>
+            <h1 class="font-display-lg text-display-lg tracking-tighter text-primary dark:text-on-surface uppercase text-center md:justify-self-center">THREADSENSE</h1>
+      <button class="text-primary hover:opacity-80 transition-opacity flex items-center justify-center w-10 h-10 -mr-2 lg:mr-0">
+        <span class="material-symbols-outlined text-2xl">shopping_bag</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="flex-1 px-margin-mobile lg:px-8 pt-stack-lg max-w-6xl mx-auto w-full">
+    
+    <!-- Changed to a 50/50 split (grid-cols-2) on large screens. This gives the right column more width, allowing the map to be much larger. -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-stack-lg lg:gap-16 xl:gap-24">
+      
+      <!-- LEFT COLUMN: Order Header & Timeline -->
+      <div class="flex flex-col justify-center">
+        <div class="mb-stack-lg">
+          <h2 class="font-headline-md text-headline-md text-primary mb-gutter-xs">Order #TS-8492</h2>
+          <p class="font-body-md text-body-md text-on-surface-variant">Arriving on Tuesday, Oct 24</p>
+        </div>
+
+        <div class="relative ml-unit mb-stack-lg lg:mb-0">
+          <div class="absolute left-[11px] top-3 bottom-6 w-px bg-surface-variant"></div>
+          
+          <div class="flex items-start gap-gutter-md mb-stack-lg relative z-10">
+            <div class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center shrink-0 mt-0.5">
+              <span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">check</span>
+            </div>
+            <div>
+              <h3 class="font-headline-sm text-headline-sm text-primary">Order Placed</h3>
+              <p class="font-body-md text-body-md text-on-surface-variant">Oct 20, 09:41 AM</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start gap-gutter-md mb-stack-lg relative z-10">
+            <div class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center shrink-0 mt-0.5">
+              <span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">check</span>
+            </div>
+            <div>
+              <h3 class="font-headline-sm text-headline-sm text-primary">Processing</h3>
+              <p class="font-body-md text-body-md text-on-surface-variant">Oct 21, 02:15 PM</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start gap-gutter-md mb-stack-lg relative z-10">
+            <div class="w-6 h-6 rounded-full bg-secondary text-on-secondary flex items-center justify-center shrink-0 mt-0.5 shadow-[0_0_0_4px_#f9f9f9]">
+              <div class="w-2 h-2 rounded-full bg-on-secondary"></div>
+            </div>
+            <div>
+              <h3 class="font-headline-sm text-headline-sm text-secondary">Shipped</h3>
+              <p class="font-body-md text-body-md text-secondary">In transit - Oct 22, 08:30 AM</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start gap-gutter-md relative z-10">
+            <div class="w-6 h-6 rounded-full bg-surface border-2 border-surface-variant flex items-center justify-center shrink-0 mt-0.5"></div>
+            <div>
+              <h3 class="font-headline-sm text-headline-sm text-on-surface-variant">Delivered</h3>
+              <p class="font-body-md text-body-md text-outline">Pending</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN: Map & Product Details -->
+      <div class="flex flex-col gap-stack-lg">
+        
+        <!-- Replaced aspect-video with explicit tall heights on desktop (lg:h-[400px]). Combined with the wider column, the map is now substantially bigger without zooming aggressively. -->
+        <div class="w-full h-64 md:h-80 lg:h-[400px] rounded-lg overflow-hidden bg-surface-container relative">
+          <img alt="Map showing delivery route" class="w-full h-full object-cover object-center grayscale opacity-60" data-alt="A minimalist, monochromatic light gray map interface showing a delivery route within a city grid." data-location="New York City" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIMvpTx3X2UKWLFdKHyksid08MepNyrDwBhR-wKak-hyfUv-bFcVvb11BKeJJPYTPP1i9mGys6UspCsHpjtfOq0UPCrhDfXLKoTmqN-y4Y_8GUcdtp5n8RNnVxNmkp1I4nE5KfikWcDTniJIMINraKGF_xRGgUUAO7WBpnk6dqlOfUPhHmkeb9fg_04f0H7etzL60WYqlK0VB6WUzTYHYoB3STpbW9Y_p_ugL9e_8sNjot_SyX_HrlGc91koPYYn1Lfe28c-tfsaI"/>
+          <div class="absolute inset-0 border border-outline-variant/30 rounded-lg pointer-events-none"></div>
+        </div>
+        
+        <div class="bg-surface rounded-lg border border-outline-variant p-gutter-md">
+          <div class="flex gap-gutter-md mb-gutter-md items-center">
+            <img alt="Emerald Silk Midi dress thumbnail" class="w-20 h-24 lg:w-24 lg:h-28 object-cover object-top rounded bg-surface-container-low shrink-0" data-alt="A high-fashion editorial close-up of a luxurious emerald green silk midi dress." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWc0X7ktgn77NkcHGYxjPk8xgecTCWRkh3UZP8ugqcbbhAdKwmH6EgXo-wiOueVsOiVzfGRoDFlMxoz53o-Wbo8T-wZ1LXJsw4fv57FviuivxBYVPqp5mvem2ZzACwNMHgaNxqJdkelNx7swrrKJQdwD6dSpCxLUtdGSCv5JhhXMGIjp-4kwK_papDyiRO_QTQHE8wHdTknvCgcL3YA4-r7WgtCa4bI3Jcpw0ZlrhZ5sSuDHKZVLDqCpznC7TliAVmCVoHGuuCwcw"/>
+            <div class="flex flex-col justify-center">
+              <h4 class="font-headline-sm text-headline-sm text-primary mb-gutter-xs">Emerald Silk Midi</h4>
+              <p class="font-body-md text-body-md text-on-surface-variant mb-unit">Qty: 1 • Size: M</p>
+              <p class="font-label-sm text-label-sm text-primary font-medium">Estimated Delivery: Oct 24</p>
+            </div>
+          </div>
+          <button class="w-full h-12 bg-surface border border-outline-variant text-primary rounded-lg font-label-caps text-label-caps uppercase tracking-widest hover:bg-surface-container transition-colors flex items-center justify-center cursor-pointer">
+            Contact Support
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</div>
+</body>
+</html>

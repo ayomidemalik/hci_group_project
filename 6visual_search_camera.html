@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>THREADSENSE - Visual Search</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed-variant": "#474747",
+                        "inverse-on-surface": "#f1f1f1",
+                        "on-secondary-fixed-variant": "#004f56",
+                        "surface-container-high": "#e8e8e8",
+                        "surface-dim": "#dadada",
+                        "secondary-container": "#9ff0fb",
+                        "on-tertiary-fixed": "#1b1b1b",
+                        "primary-fixed": "#e2e2e2",
+                        "surface-container": "#eeeeee",
+                        "on-tertiary-fixed-variant": "#474747",
+                        "on-primary-fixed": "#1b1b1b",
+                        "on-primary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "surface": "#f9f9f9",
+                        "outline": "#7e7576",
+                        "secondary-fixed": "#9ff0fb",
+                        "on-primary-container": "#848484",
+                        "primary-fixed-dim": "#c6c6c6",
+                        "surface-bright": "#f9f9f9",
+                        "error-container": "#ffdad6",
+                        "surface-variant": "#e2e2e2",
+                        "surface-tint": "#5e5e5e",
+                        "secondary": "#006972",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-container": "#066f79",
+                        "tertiary": "#000000",
+                        "primary": "#000000",
+                        "inverse-primary": "#c6c6c6",
+                        "on-tertiary-container": "#848484",
+                        "secondary-fixed-dim": "#82d3de",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed": "#e2e2e2",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed-dim": "#c6c6c6",
+                        "tertiary-container": "#1b1b1b",
+                        "primary-container": "#1b1b1b",
+                        "on-surface-variant": "#4c4546",
+                        "background": "#f9f9f9",
+                        "on-secondary-fixed": "#001f23",
+                        "surface-container-highest": "#e2e2e2",
+                        "surface-container-low": "#f3f3f3",
+                        "inverse-surface": "#303030",
+                        "outline-variant": "#cfc4c5",
+                        "on-background": "#1b1b1b",
+                        "on-surface": "#1b1b1b",
+                        "on-secondary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "gutter-sm": "8px",
+                        "stack-xl": "48px",
+                        "gutter-md": "16px",
+                        "gutter-xs": "4px",
+                        "margin-mobile": "20px",
+                        "stack-lg": "32px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Inter"],
+                        "headline-sm": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["11px", { "lineHeight": "14px", "fontWeight": "500" }],
+                        "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "500" }],
+                        "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Safe area padding for mobile notches */
+        .pt-safe { padding-top: max(1.5rem, env(safe-area-inset-top)); }
+        .pb-safe { padding-bottom: max(1.5rem, env(safe-area-inset-bottom)); }
+        
+        body {
+            min-height: max(600px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-tertiary text-on-tertiary antialiased selection:bg-surface-variant selection:text-on-surface w-full h-screen overflow-hidden flex flex-col items-center">
+   <div class="fixed top-4 right-4 z-[9999] flex gap-2">
+    <a href="5home_new_arrivals.html" class="bg-surface-container-lowest text-primary border border-outline-variant font-label-caps text-label-caps px-4 py-2 rounded-full shadow-lg hover:bg-surface-container-low hover:shadow-xl transition-all flex items-center gap-1 uppercase tracking-wider backdrop-blur-md bg-opacity-90">
+        <span class="material-symbols-outlined text-[18px]">arrow_back</span>
+        Back
+    </a>
+    
+    <a href="7product_listing.html" class="bg-primary text-on-primary font-label-caps text-label-caps px-4 py-2 rounded-full shadow-lg hover:bg-surface-tint hover:shadow-xl transition-all flex items-center gap-1 uppercase tracking-wider backdrop-blur-md bg-opacity-90">
+        Next 
+        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+    </a>
+</div>
+
+    <!-- Main Container -->
+    <main class="relative w-full h-full flex flex-col justify-between items-center max-w-[1920px]">
+        
+        <!-- Live Camera Feed Background (Simulated) -->
+        <div class="absolute inset-0 z-0 bg-tertiary flex items-center justify-center overflow-hidden">
+            <!-- Desktop Blurred Backdrop: Prevents black bars on desktop when using object-contain -->
+            <img alt="" class="hidden md:block absolute inset-0 w-full h-full object-cover blur-3xl opacity-40 scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7Tm2tUdofjRrruCOKlR66TnuWtQ1UeGXu_otiSaHO-FoTcnfanQlZm_ukDOfpPAl7bnKMIdRuM6mQXTuTQzrJdkU9JQiAs-QYeq-TtttbnQS5vnntNUD4o_aZ_JqYQNkwEWpg3JFtHyI5FVu-6UibwuybRzOQkIXfvK5UqP948xkcoODlfkcyYZzrKjsIjYX0uwwPxQ1praDd4DKearURPw3DiN5Rz3jy5tfcgQ9OPGIXrSDMnumMhSvkvP0TTZ8URxebnU5mQyM"/>
+            
+            <!-- Main Camera Feed: object-cover on mobile, object-contain on desktop to fix zooming -->
+            <img alt="Camera Viewfinder" class="relative w-full h-full object-cover md:object-contain blur-[2px] opacity-90 scale-105 md:scale-100 transition-transform duration-500" data-alt="A first-person view through a smartphone camera viewfinder. The subject is a stylish, modern high-fashion outfit worn by an anonymous figure walking down a bright, minimalist city street. The background and subject are slightly out of focus, simulating a camera actively searching for a subject to scan. The lighting is natural, bright, and soft, perfectly fitting a premium, airy light-mode aesthetic. The color palette relies on neutral greys, soft whites, and muted natural tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7Tm2tUdofjRrruCOKlR66TnuWtQ1UeGXu_otiSaHO-FoTcnfanQlZm_ukDOfpPAl7bnKMIdRuM6mQXTuTQzrJdkU9JQiAs-QYeq-TtttbnQS5vnntNUD4o_aZ_JqYQNkwEWpg3JFtHyI5FVu-6UibwuybRzOQkIXfvK5UqP948xkcoODlfkcyYZzrKjsIjYX0uwwPxQ1praDd4DKearURPw3DiN5Rz3jy5tfcgQ9OPGIXrSDMnumMhSvkvP0TTZ8URxebnU5mQyM"/>
+            
+            <!-- Subtle Top Gradient for UI legibility -->
+            <div class="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-tertiary/60 to-transparent pointer-events-none"></div>
+        </div>
+
+        <!-- Top Controls Overlay -->
+        <header class="relative z-20 flex justify-between items-center w-full px-margin-mobile md:px-8 pt-safe md:pt-8 pointer-events-none">
+            <button aria-label="Close camera" class="w-10 h-10 flex items-center justify-start text-on-tertiary pointer-events-auto hover:opacity-70 transition-opacity">
+                <span class="material-symbols-outlined text-[28px]">close</span>
+            </button>
+            <button aria-label="Toggle flash" class="w-10 h-10 flex items-center justify-end text-on-tertiary pointer-events-auto hover:opacity-70 transition-opacity">
+                <span class="material-symbols-outlined text-[28px]">bolt</span>
+            </button>
+        </header>
+
+        <!-- Center Framing Guide Container -->
+        <div class="flex-1 w-full flex items-center justify-center relative z-10 pointer-events-none px-4">
+            <!-- Framing Guide: Tall on mobile, wide on desktop -->
+            <div class="w-[280px] h-[360px] md:w-[480px] md:h-[320px] lg:w-[560px] lg:h-[360px] border border-on-tertiary/40 rounded-lg relative transition-all duration-500 ease-in-out">
+                <!-- Corner Brackets for professional polish -->
+                <div class="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-on-tertiary rounded-tl-lg"></div>
+                <div class="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-on-tertiary rounded-tr-lg"></div>
+                <div class="absolute bottom-0 left-0 w-6 h-6 border-b-2 border-l-2 border-on-tertiary rounded-bl-lg"></div>
+                <div class="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-on-tertiary rounded-br-lg"></div>
+            </div>
+        </div>
+
+        <!-- Bottom Controls Panel -->
+        <!-- Responsive Footer: Anchored bottom on mobile, floating island on desktop -->
+        <footer class="relative z-20 w-full md:w-auto md:min-w-[420px] md:mb-8 bg-tertiary/40 backdrop-blur-xl border-t md:border border-on-tertiary/10 pb-safe md:pb-8 pt-stack-lg md:pt-8 rounded-t-xl md:rounded-2xl transition-all duration-300">
+            <div class="flex flex-col items-center justify-center px-margin-mobile gap-gutter-md">
+                <!-- Shutter Button -->
+                <button aria-label="Take photo" class="relative flex items-center justify-center w-[72px] h-[72px] group hover:scale-105 transition-transform">
+                    <!-- Outer Ring -->
+                    <div class="absolute inset-0 border-[3px] border-on-tertiary rounded-full opacity-80 group-hover:opacity-100 transition-opacity"></div>
+                    <!-- Inner Button -->
+                    <div class="w-[52px] h-[52px] bg-on-tertiary rounded-full shadow-sm"></div>
+                </button>
+                
+                <!-- Action Text -->
+                <button class="font-body-md text-body-md text-on-tertiary opacity-90 hover:opacity-100 tracking-wide mt-unit transition-opacity">
+                    Upload from Photos
+                </button>
+            </div>
+        </footer>
+
+    </main>
+</body>
+</html>

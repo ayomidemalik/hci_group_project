@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>THREADSENSE - Customer Reviews</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;900&amp;display=swap" rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#004f56",
+                        "surface-tint": "#5e5e5e",
+                        "on-error-container": "#93000a",
+                        "tertiary": "#000000",
+                        "on-surface": "#1b1b1b",
+                        "tertiary-fixed": "#e2e2e2",
+                        "tertiary-fixed-dim": "#c6c6c6",
+                        "surface": "#f9f9f9",
+                        "outline-variant": "#cfc4c5",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-container": "#848484",
+                        "error-container": "#ffdad6",
+                        "surface-container": "#eeeeee",
+                        "on-secondary-fixed": "#001f23",
+                        "primary": "#000000",
+                        "on-background": "#1b1b1b",
+                        "inverse-surface": "#303030",
+                        "surface-variant": "#e2e2e2",
+                        "secondary-fixed-dim": "#82d3de",
+                        "outline": "#7e7576",
+                        "surface-container-highest": "#e2e2e2",
+                        "inverse-on-surface": "#f1f1f1",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed": "#e2e2e2",
+                        "on-tertiary-fixed": "#1b1b1b",
+                        "tertiary-container": "#1b1b1b",
+                        "surface-container-low": "#f3f3f3",
+                        "surface-container-high": "#e8e8e8",
+                        "inverse-primary": "#c6c6c6",
+                        "secondary-container": "#9ff0fb",
+                        "primary-fixed-dim": "#c6c6c6",
+                        "on-secondary": "#ffffff",
+                        "background": "#f9f9f9",
+                        "on-primary-fixed": "#1b1b1b",
+                        "error": "#ba1a1a",
+                        "secondary-fixed": "#9ff0fb",
+                        "on-tertiary-fixed-variant": "#474747",
+                        "on-surface-variant": "#4c4546",
+                        "on-error": "#ffffff",
+                        "surface-dim": "#dadada",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-container": "#848484",
+                        "on-primary-fixed-variant": "#474747",
+                        "secondary": "#006972",
+                        "surface-bright": "#f9f9f9",
+                        "on-secondary-container": "#066f79",
+                        "primary-container": "#1b1b1b"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-xl": "48px",
+                        "gutter-xs": "4px",
+                        "stack-lg": "32px",
+                        "margin-mobile": "20px",
+                        "unit": "8px",
+                        "gutter-sm": "8px",
+                        "gutter-md": "16px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "headline-sm": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-sm": ["11px", { "lineHeight": "14px", "fontWeight": "500" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "500" }],
+                        "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .material-symbols-outlined.filled { font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        body { min-height: max(884px, 100dvh); }
+    </style>
+</head>
+<body class="bg-surface text-on-surface pb-24 md:pb-0">
+    <div class="fixed bottom-24 right-4 md:bottom-8 md:right-8 z-[9999] flex gap-1 bg-white/90 dark:bg-black/90 backdrop-blur-md p-1 rounded-full shadow-md border border-gray-200 dark:border-gray-800">
+        <a href="11truefit_analysis.html" class="px-3 py-2 rounded-full font-sans text-[10px] leading-none uppercase tracking-widest font-semibold text-black dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-all flex items-center gap-1">
+            <span class="material-symbols-outlined text-[14px]">arrow_back</span>
+            Back
+        </a>
+        <a href="13shopping_bag.html" class="px-3 py-2 rounded-full font-sans text-[10px] leading-none uppercase tracking-widest font-semibold bg-black text-white dark:bg-white dark:text-black hover:opacity-80 transition-all flex items-center gap-1 shadow-sm">
+            Next 
+            <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+        </a>
+    </div>
+    
+    <!-- TopAppBar -->
+    <header class="fixed top-0 w-full z-50 bg-surface/95 backdrop-blur-sm dark:bg-surface-container/95 flex justify-center border-b border-outline-variant dark:border-outline transition-all">
+        <div class="w-full max-w-6xl flex justify-between items-center px-margin-mobile md:px-8 py-4">
+            <!-- Left: Mobile Menu & Desktop Links -->
+            <div class="flex-1 flex items-center gap-6">
+                <button class="md:hidden text-primary dark:text-on-surface hover:opacity-70 transition-opacity">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+                <nav class="hidden md:flex gap-6 items-center">
+                    <a href="#" class="text-body-md font-medium text-on-surface-variant hover:text-primary transition-colors">Shop</a>
+                    <a href="#" class="text-body-md font-medium text-on-surface-variant hover:text-primary transition-colors">Collections</a>
+                    <a href="#" class="text-body-md font-medium text-on-surface-variant hover:text-primary transition-colors">About</a>
+                </nav>
+            </div>
+
+            <!-- Center: Logo -->
+            <h1 class="font-display-lg text-display-lg tracking-tighter text-primary dark:text-on-surface uppercase text-center md:justify-self-center">THREADSENSE</h1>
+
+            <!-- Right: Action Icons -->
+            <div class="flex-1 flex justify-end items-center gap-4">
+                <button class="hidden md:block text-primary dark:text-on-surface hover:opacity-70 transition-opacity">
+                    <span class="material-symbols-outlined">search</span>
+                </button>
+                <button class="text-primary dark:text-on-surface hover:opacity-70 transition-opacity relative">
+                    <span class="material-symbols-outlined">shopping_bag</span>
+                    <!-- Optional Notification dot for cart -->
+                    <span class="absolute top-0 right-0 w-2 h-2 bg-primary rounded-full"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="pt-[90px] md:pt-[120px] px-margin-mobile md:px-8 max-w-6xl mx-auto md:pb-16">
+        
+        <!-- Desktop Grid Layout -->
+        <div class="lg:grid lg:grid-cols-12 lg:gap-16 items-start">
+            
+            <!-- Left Column: Header & Overall Rating (Sticky on Desktop) -->
+            <section class="lg:col-span-4 lg:sticky lg:top-[120px] py-6 md:py-0 text-center lg:text-left border-b lg:border-b-0 border-outline-variant mb-8 lg:mb-0">
+                <h2 class="font-headline-md text-headline-md mb-gutter-sm text-primary">Customer Reviews</h2>
+                
+                <div class="flex items-center justify-center lg:justify-start gap-gutter-sm mb-gutter-xs">
+                    <span class="font-display-lg text-5xl md:text-display-lg text-primary">4.8</span>
+                    <span class="text-outline-variant text-body-lg">/ 5</span>
+                </div>
+                
+                <div class="flex items-center justify-center lg:justify-start gap-1 mb-unit text-primary">
+                    <span class="material-symbols-outlined filled text-lg">star</span>
+                    <span class="material-symbols-outlined filled text-lg">star</span>
+                    <span class="material-symbols-outlined filled text-lg">star</span>
+                    <span class="material-symbols-outlined filled text-lg">star</span>
+                    <span class="material-symbols-outlined text-lg">star_half</span>
+                </div>
+                
+                <p class="font-body-md text-body-md text-on-surface-variant mb-stack-lg">Based on 124 reviews</p>
+                
+                <!-- Upgraded Button for better contrast & CTA prominence -->
+                <button class="w-full sm:w-2/3 lg:w-full mx-auto px-8 py-4 bg-primary text-on-primary font-label-caps text-label-caps rounded-lg hover:bg-inverse-surface transition-colors uppercase tracking-widest shadow-sm">
+                    Write a Review
+                </button>
+            </section>
+
+            <!-- Right Column: Reviews List -->
+            <section class="lg:col-span-8 flex flex-col gap-stack-lg">
+                
+                <!-- Review 1 -->
+                <article class="flex flex-col gap-unit pb-stack-lg border-b border-outline-variant hover:bg-surface-container-lowest transition-colors rounded-lg lg:p-4 lg:-ml-4">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <div class="flex items-center gap-1 text-primary mb-1">
+                                <span class="material-symbols-outlined filled text-sm">star</span>
+                                <span class="material-symbols-outlined filled text-sm">star</span>
+                                <span class="material-symbols-outlined filled text-sm">star</span>
+                                <span class="material-symbols-outlined filled text-sm">star</span>
+                                <span class="material-symbols-outlined filled text-sm">star</span>
+                            </div>
+                            <h3 class="font-headline-sm text-headline-sm text-primary">Julianne</h3>
+                        </div>
+                        <time class="font-label-sm text-label-sm text-on-surface-variant mt-1">2 days ago</time>
+                    </div>
+                    <p class="font-body-lg text-body-lg text-on-surface mt-unit leading-relaxed">
+                        The silk is incredibly smooth and light. It fits true to size, with a beautiful drape. I wore it out to dinner and received so many compliments. Highly recommend.
+                    </p>
+                </article>
+
+                <!-- Review 2 (with photos) -->
+                <article class="flex flex-col gap-unit pb-stack-lg border-b border-outline-variant hover:bg-surface-container-lowest transition-colors rounded-lg lg:p-4 lg:-ml-4">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <div class="flex items-center gap-1 text-primary mb-1">
+                                <span class="material-symbols-outlined filled text-sm">star</span>
+                                <span class="material-symbols-outlined filled text-sm">star</span>
+                                <span class="material-symbols-outlined filled text-sm">star</span>
+                                <span class="material-symbols-outlined filled text-sm">star</span>
+                                <span class="material-symbols-outlined filled text-sm">star</span>
+                            </div>
+                            <h3 class="font-headline-sm text-headline-sm text-primary">Marcus T.</h3>
+                        </div>
+                        <time class="font-label-sm text-label-sm text-on-surface-variant mt-1">1 week ago</time>
+                    </div>
+                    <p class="font-body-lg text-body-lg text-on-surface mt-unit leading-relaxed">
+                        Excellent craftsmanship. The stitching is flawless, and the fabric feels substantial without being heavy. The minimal design is exactly what I was looking for.
+                    </p>
+                    
+                    <!-- Responsive Image Gallery -->
+                    <div class="flex flex-wrap gap-gutter-md mt-gutter-md">
+                        <img alt="Close up texture of a crisp, white high-end organic cotton fabric" 
+                             class="w-20 h-20 md:w-28 md:h-28 object-cover rounded-lg bg-surface-container border border-outline-variant hover:opacity-90 cursor-pointer transition-opacity" 
+                             src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiS2BGLuztRCPkFR0oqrqaI8J6T6Y-LGSWQtCJfZ8BB01W8olOBXDt8_bIK8qMwrMb3a5J9BYx_30a_TR8LZ9JBewz7sFPBwu96PPFXvuOLlYgFpsa23cMPCqkOEpIFxXnt1XuwTPUA9ULnngb2O2jeU8cKD32t3W1Q1SR56cH6hy45fdOOu0zPDp8GalxUvbcDkkYLByDamtZwl6UPSf_VCuXD0tOhtRvL86r4264Fp2lwYm2QHDasWDExPiQNP1UJBvkFqEeGgc"/>
+                        <img alt="A detail shot of a tailored sleeve cuff on a minimalist white shirt" 
+                             class="w-20 h-20 md:w-28 md:h-28 object-cover rounded-lg bg-surface-container border border-outline-variant hover:opacity-90 cursor-pointer transition-opacity" 
+                             src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4IGUWLpCmyQLhSfkfz5I4CqhPAoM_0nLxfp10tkd-9c0N88PJsy3r7ay6xlnNSYnkooRHO0n5hzie8SzLSocYp8_viehB3XxGl0Jsgzx7KFnudHez1rtL05u0Glwsxlh25P5QGK2HwcOaIWuDM1JF_DMrF1rtFS-Ln1okHzAAXWYimXdYMwMIYo6sE51sDTc0oNlXI6l5Awgh0HqSzSKM5KJJoekErJUs-SPZkH629gynjGpNm78UVtJlOIn6TvFZ7cZvsRO8H8w"/>
+                    </div>
+                </article>
+
+                <!-- Review 3 -->
+                <article class="flex flex-col gap-unit pb-stack-lg border-b lg:border-b-0 border-outline-variant hover:bg-surface-container-lowest transition-colors rounded-lg lg:p-4 lg:-ml-4">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <div class="flex items-center gap-1 text-primary mb-1">
+                                <span class="material-symbols-outlined filled text-sm">star</span>
+                                <span class="material-symbols-outlined filled text-sm">star</span>
+                                <span class="material-symbols-outlined filled text-sm">star</span>
+                                <span class="material-symbols-outlined filled text-sm">star</span>
+                                <span class="material-symbols-outlined text-sm text-outline-variant">star_border</span>
+                            </div>
+                            <h3 class="font-headline-sm text-headline-sm text-primary">Eleanor</h3>
+                        </div>
+                        <time class="font-label-sm text-label-sm text-on-surface-variant mt-1">3 weeks ago</time>
+                    </div>
+                    <p class="font-body-lg text-body-lg text-on-surface mt-unit leading-relaxed">
+                        Beautifully made, but the color was slightly cooler in tone than it appeared on my screen. Still keeping it because the fit is impeccable.
+                    </p>
+                </article>
+
+            </section>
+        </div>
+    </main>
+
+    <!-- BottomNavBar (Mobile Only) -->
+    <nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 py-3 pb-safe bg-surface/95 backdrop-blur-md dark:bg-surface-container-highest border-t border-outline-variant dark:border-outline z-50">
+        <button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors">
+            <span class="material-symbols-outlined mb-1 text-[24px]">home</span>
+            <span class="font-label-caps text-[10px]">Home</span>
+        </button>
+        <button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors">
+            <span class="material-symbols-outlined mb-1 text-[24px]">search</span>
+            <span class="font-label-caps text-[10px]">Search</span>
+        </button>
+        <button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors">
+            <span class="material-symbols-outlined mb-1 text-[24px]">favorite</span>
+            <span class="font-label-caps text-[10px]">Saved</span>
+        </button>
+        <button class="flex flex-col items-center justify-center text-primary dark:text-on-primary-fixed transition-transform duration-150 relative">
+            <span class="material-symbols-outlined filled mb-1 text-[24px]">shopping_bag</span>
+            <span class="font-label-caps text-[10px] font-bold">Bag</span>
+        </button>
+    </nav>
+    
+</body>
+</html>
