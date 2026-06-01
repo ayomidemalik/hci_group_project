@@ -104,25 +104,36 @@
         }
     </style>
 </head>
-<body class="min-h-screen w-full flex flex-col justify-center items-center text-primary px-4 sm:px-6 lg:px-8">
+<body class="min-h-screen w-full flex flex-col justify-center items-center text-primary px-4 sm:px-6 lg:px-8 relative pb-24 md:pb-0">
     <div class="fixed top-4 right-4 md:top-8 md:right-8 z-[50] flex bg-white/90 dark:bg-black/90 backdrop-blur-md p-1 rounded-full shadow-md border border-gray-200 dark:border-gray-800">
         <a href="2onboarding_meet_threadsense.html" class="px-4 py-2 rounded-full font-sans text-[10px] leading-none uppercase tracking-widest font-semibold bg-black text-white dark:bg-white dark:text-black hover:opacity-80 transition-all flex items-center gap-1 shadow-sm">
             Next 
             <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
         </a>
     </div>
+
     <div class="flex flex-col items-center justify-center space-y-6 sm:space-y-8 md:space-y-10 max-w-7xl mx-auto w-full">
-        
-        <!-- Logo Text -->
         <h1 class="font-display-lg text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-center tracking-tighter uppercase text-primary transition-all duration-300">
             ThreadSense
         </h1>
         
-        <!-- Haptic Icon Image -->
         <img alt="ThreadSense Logo Icon" 
              class="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 object-contain transition-transform duration-300 hover:scale-105" 
              src="thread.png.png"/>
-             
+    </div>
+
+    <div class="md:fixed md:bottom-6 mx-auto max-w-md w-[calc(100%-2rem)] mt-10 md:mt-0 z-40 bg-surface-container-low dark:bg-black/40 border border-outline-variant/60 rounded-xl p-4 shadow-sm backdrop-blur-sm transition-all duration-300">
+        <div class="flex items-start gap-3">
+            <span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">devices</span>
+            <div class="flex flex-col gap-1">
+                <p class="font-sans text-[11px] font-semibold uppercase tracking-wider text-on-surface">
+                    Optimal Mobile Experience
+                </p>
+                <p class="font-sans text-[13px] text-on-surface-variant leading-relaxed">
+                    If you are on a desktop, please <strong class="text-primary font-medium">right-click</strong> anywhere, select the option <strong class="text-primary font-medium">"Inspect"</strong>, and click device type or icon to choose a mobile screen simulator.
+                </p>
+            </div>
+        </div>
     </div>
 </body>
 </html>
